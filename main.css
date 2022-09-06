@@ -1,0 +1,140 @@
+:root {
+  --left-width: 400px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Libre Franklin", serif;
+  letter-spacing: 0.4px;
+}
+
+#outer-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#left-container {
+  width: var(--left-width);
+  height: 100vh;
+  background-image: url("./steps.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.banner {
+  margin-top: 120px;
+  height: 100px;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 99;
+
+  width: var(--left-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h2 {
+  color: white;
+  z-index: 100;
+  margin-left: 5px;
+  font-size: 48px;
+  letter-spacing: -3px;
+}
+
+#icon {
+  height: 50px;
+  opacity: 0.6;
+  background-color: white;
+  border-radius: 5px;
+  z-index: 99;
+  padding: 4px;
+}
+
+.banner > h2 {
+}
+
+#right-container {
+  width: auto;
+  height: 100vh;
+  background-color: #f9fafb;
+}
+
+.top {
+  margin-left: 30px;
+  margin-right: 340px;
+  margin-top: 100px;
+}
+
+.top p {
+  font-weight: bold;
+}
+
+.middle {
+  padding: 16px 340px 20px 30px;
+  background-color: white;
+
+  box-shadow: 2px 2px 10px rgb(0 0 0 / 0.2);
+}
+
+.inline {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  margin-right: 48px;
+  margin-top: 14px;
+}
+
+input {
+  width: 200px;
+  height: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  border-radius: 4px;
+}
+input:valid {
+  border: 1px solid #dce4ef;
+}
+input:placeholder-shown {
+  border: 1px solid #dce4ef;
+}
+input:invalid:not(:placeholder-shown) {
+  border: 1px solid red;
+}
+
+input:focus {
+  box-shadow: 2px 2px 10px rgb(0 0 0 / 0.2);
+}
+
+.bottom {
+  margin-left: 30px;
+  margin-right: 340px;
+}
+
+.bottom button {
+  margin-top: 24px;
+  padding: 8px 38px;
+  background-color: #596d48;
+  color: white;
+  border-radius: 4px;
+  border: none;
+
+  box-shadow: 2px 2px 10px rgb(0 0 0 / 0.2);
+}
+
+label {
+  font-weight: 100;
+  font-size: 8px;
+  color: #2c3643;
+}

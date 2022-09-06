@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,600;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function checkMatch() {
+        if (
+          document.getElementById("password").value ===
+          document.getElementById("confirm").value
+        ) {
+          document.getElementById("password").style.border =
+            "1px solid #dce4ef";
+
+          document.getElementById("confirm").style.border = "1px solid #dce4ef";
+        } else {
+          document.getElementById("password").style.border = "1px solid red";
+
+          document.getElementById("confirm").style.border = "1px solid red";
+        }
+      }
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="outer-container">
+      <div id="left-container">
+        <div class="banner">
+          <img id="icon" src="./glasses.png" alt="" />
+          <h2>My Form</h2>
+        </div>
+      </div>
+      <div id="right-container">
+        <div class="top">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams.
+          </p>
+          <p>Sign up <em>now</em> to get started</p>
+          <p style="margin: 20px 0 40px 0">You <em>know</em> you want to.</p>
+        </div>
+        <div class="middle">
+          <p style="margin-bottom: 14px">Let's do this!</p>
+          <form id="my-form" action="#" method="post">
+            <div class="inline">
+              <div class="vertical">
+                <label for="first">FIRST NAME</label>
+                <input type="text" placeholder=" " id="first" required />
+              </div>
+              <div class="vertical">
+                <label for="last">LAST NAME</label>
+                <input type="text" placeholder=" " id="last" required />
+              </div>
+            </div>
+            <div class="inline">
+              <div class="vertical">
+                <label for="email">EMAIL</label>
+                <input
+                  type="email"
+                  placeholder=" "
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="vertical">
+                <label for="phone">PHONE NUMBER</label>
+                <input
+                  type="tel"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  oninvalid="this.setCustomValidity('Please enter number in format xxx-xxx-xxxx')"
+                  id="phone"
+                />
+              </div>
+            </div>
+            <div class="inline">
+              <div class="vertical">
+                <label for="password">PASSWORD</label>
+                <input
+                  placeholder=" "
+                  onkeyup="checkMatch()"
+                  type="password"
+                  id="password"
+                  required
+                />
+              </div>
+              <div class="vertical">
+                <label for="confirm">CONFIRM PASSWORD</label>
+                <input
+                  placeholder=" "
+                  onkeyup="checkMatch()"
+                  type="password"
+                  id="confirm"
+                  required
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="bottom">
+          <button form="my-form" type="submit">Create Account</button>
+          <p style="font-size: 12px; margin-top: 20px">
+            Already have an account?
+            <a style="text-decoration: none" href="">Log in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
