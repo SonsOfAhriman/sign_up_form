@@ -1,8 +1,18 @@
-:root {
-  --left-width: 400px;
+@media only screen and (max-width: 600px) {
+  :root {
+    --left-width: 200px;
+  }
 }
 
-* {
+@media only screen and (min-width: 600px) {
+  :root {
+    --left-width: 400px;
+  }
+}
+
+*,
+html,
+body {
   padding: 0;
   margin: 0;
 }
@@ -93,6 +103,19 @@ body {
   flex-direction: column;
   margin-right: 48px;
   margin-top: 14px;
+}
+@media only screen and (max-width: 600px) {
+  .inline {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .inline {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 input {
