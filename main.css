@@ -29,7 +29,8 @@ body {
 
 #left-container {
   width: var(--left-width);
-  height: 100vh;
+  min-height: 100vh;
+  position: fixed;
   background-image: url("./steps.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -67,10 +68,8 @@ body {
   padding: 4px;
 }
 
-.banner > h2 {
-}
-
 #right-container {
+  margin-left: var(--left-width);
   width: auto;
   height: 100vh;
   background-color: #f9fafb;
